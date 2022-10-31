@@ -1,39 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <>
-      <div>Home</div>
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-        <Link to="/" className="navbar-brand">Home</Link>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-              <Link to="/product">Product</Link>
-              </li>
-              <li class="nav-item">
-              <Link to="/cart">Cart</Link>
-              </li>
-            </ul>
+    <div>
+      <h1>Home</h1>
+      <Navbar />
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
+            asperiores ratione, ex, natus soluta voluptatum saepe eum in illo
+            fugit non voluptate quae ea. Autem ipsa expedita magnam harum
+            quaerat!
+          </div>
+          <div class="col">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
+            asperiores ratione, ex, natus soluta voluptatum saepe eum in illo
+            fugit non voluptate quae ea. Autem ipsa expedita magnam harum
+            quaerat!
+          </div>
+          <div class="col">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
+            asperiores ratione, ex, natus soluta voluptatum saepe eum in illo
+            fugit non voluptate quae ea. Autem ipsa expedita magnam harum
+            quaerat!
           </div>
         </div>
-      </nav>
-   
-
-
-    </>
+      </div>
+    </div>
   );
-}
+} 
