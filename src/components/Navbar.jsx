@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const show = navbarOpen ? "show" : "";
+  const handleToggle = () => {
+    setNavbarOpen((prev) => !prev);
+  };
+
   return (
     <>
       <nav class="navbar navbar-expand-lg bg-light">
@@ -10,17 +17,18 @@ export default function Navbar() {
             Home
           </Link>
           <button
+            onClick={handleToggle}
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={show ? true : false}
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class={`collapse navbar-collapse`} id="navbarNav">
+          <div class={`collapse ${show} navbar-collapse`} id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <Link to="/product" className="nav-link">
